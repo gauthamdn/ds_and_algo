@@ -18,10 +18,6 @@ import java.util.Arrays;
 // myIntArray[i] = myIntArray[i-1]; 	// this is how we shift the array[i] with array[i-1] value  eg: -15 is less than 35 so 35 shifts right to index 2, and then -15 is less than 20 so 20 shifts right to index 1
 //and finally once you are out of loop, assign array[i] with the tempElem;
 
-// complexity o(n^2)
-// stable sort , because we are inserting into the sorted array, we will pick the first 9 and then only we pick the last occuring 9 
-
-
 
 public class InsertionSort {
 
