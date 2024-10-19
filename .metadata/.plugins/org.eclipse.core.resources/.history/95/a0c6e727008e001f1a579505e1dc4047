@@ -4,8 +4,12 @@ import java.util.Arrays;
 
 public class BubbleSort {
 
+	
+
+	
+
 	// step 1: write a swap method , because bubble sort uses swap method
-	// concept is - the largest number in the array will bubble to the end of the array
+	// concept - the largest number in the array will bubble to the end of the array
 	// eg: in the sample array {20,35,-15,7,55,1,-22} , in the first iteration 55 will go to the last postion
 	// start with comparing values at first two indexes , if a[i] > a[j] then swap , else increment.
 	// This is also called a in-place sorting algorithm, because we will logically divide the array into sorted and unsorted arrays. 
@@ -13,7 +17,7 @@ public class BubbleSort {
 	// in the below case we start with lastUnsortedIndex = arraylength - 1 and once the first iteration 55 moves to last position, we decrement the lastUnsortedIndex
 	// and we go on until we hit lastUnsortedIndex == 0 , once we reach 0 the array is sorted
 	// the innerloop will compare i=0 and i+1th element and swap if 0th element> 1st element and increment until the lastUnsortedIndex. 
-	// complexity of the bubble sort is O(n^2)
+	
 
 	
 	public static void main(String[] args) {
@@ -35,7 +39,9 @@ public class BubbleSort {
 		
 		System.out.println("-".repeat(10)+"Sorted Array"+"-".repeat(10));
 		System.out.println(Arrays.toString(myIntArray));
-
+		
+		
+		
 	}
 
 	// pass the array we are swapping and the two indices that we want to swap

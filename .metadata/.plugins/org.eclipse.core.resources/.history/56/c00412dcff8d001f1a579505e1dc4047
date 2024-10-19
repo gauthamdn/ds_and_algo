@@ -1,0 +1,32 @@
+package algorithms;
+
+public class BubbleSort {
+
+	
+
+	
+
+	// step 1: write a swap method , because bubble sort uses swap method
+
+	
+	public static void main(String[] args) {
+		
+		
+		
+	}
+
+	// pass the array we are swapping and the two indices that we want to swap
+	public static void swap(int[] array, int i, int j) {
+		
+		// if i and j indices are same, nothing to swap
+		if(i == j)
+			return;
+		
+		// swap using a temp variable
+		int temp = array[i];
+		array[i] = array[j];
+		array[j] = temp;
+ 		
+	}
+	
+}
