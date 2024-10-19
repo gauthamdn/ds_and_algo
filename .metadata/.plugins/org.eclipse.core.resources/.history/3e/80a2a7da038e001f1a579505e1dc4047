@@ -1,0 +1,39 @@
+package algorithms;
+
+import java.util.Arrays;
+
+public class SelectionSort {
+	
+	public static void main(String[] args) {
+		
+		int[] myIntArray = {20,35,-15,7,55,1,-22};
+		
+		
+		System.out.println("-".repeat(10)+"INITIAL ARRAY"+"-".repeat(10));
+		System.out.println(Arrays.toString(myIntArray));
+		
+		
+		
+		
+		
+		
+		
+		System.out.println("-".repeat(10)+"SORTED ARRAY"+"-".repeat(10));
+		System.out.println(Arrays.toString(myIntArray));
+		
+	}
+	
+	
+	public static void swap(int[] arr , int i , int j) {
+		if(i==j )
+			return;
+		
+		int temp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = temp;
+		
+
+ 	}
+
+}
+

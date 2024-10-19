@@ -14,12 +14,6 @@ public class BubbleSort {
 	// and we go on until we hit lastUnsortedIndex == 0 , once we reach 0 the array is sorted
 	// the innerloop will compare i=0 and i+1th element and swap if 0th element> 1st element and increment until the lastUnsortedIndex. 
 	// complexity of the bubble sort is O(n^2)
-	// bubble sort is a stable sorting algo
-	// stable & unstable sort - what happens when there are two elements in an array which are same. 
-	// ex: if the unsorted array contains two 9's { 20, 9, -15, 7, 9, 1, 55 } , now will the order of the 9's maintained? or not?
-	// This is not much important when we have integer arrays , but its important when we have object arrays
-	// Stable sort maintains the order of elements ie the first 9 will be before the last 9 in the sorted array
-	// unstable sort does not maintain the order of elements
 
 	
 	public static void main(String[] args) {
