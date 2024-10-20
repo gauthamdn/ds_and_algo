@@ -1,10 +1,10 @@
-package algorithms;
+package algo2;
 
 import java.util.Arrays;
 import java.util.Random;
 
-public class SortTemplate {
-
+public class InsertionSort2 {
+	
 	public static void main(String[] args) {
 		
 		int[] intArr = randomArray(10);
@@ -12,7 +12,7 @@ public class SortTemplate {
 		System.out.println("-".repeat(20)+" INITIAL ARRAY "+"-".repeat(20));
 		System.out.println(Arrays.toString(intArr));
 		
-		// WRITE YOUR LOGIC HERE
+		
 		
 		
 		
@@ -32,15 +32,5 @@ public class SortTemplate {
 		
 		return randomArray;
 	}
-	
-	
-	public static void swap(int[] arr, int i , int j) {
-		if(i==j)
-			return; // do nothing
-		
-		int temp = arr[i];
-		arr[i] = arr[j];
-		arr[j] = temp;
- 	}
 
 }

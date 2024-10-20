@@ -43,8 +43,6 @@ public class InsertionSort {
 			
 			// remember we are travesing the sorted partition so i-- 
 			for(i = firstUnsortedIndex ; i>0 && myIntArray[i-1]>tempElem;i--) {
-				System.out.println("tempElem: "+tempElem);
-
 				// this is how we shift the array[i] with array[i-1] value  eg: -15 is less than 35 so 35 shifts right to index 2, and then -15 is less than 20 so 20 shifts right to index 1
 				myIntArray[i] = myIntArray[i-1]; // i-1 will take care of the 0 index in the first loop
 			
