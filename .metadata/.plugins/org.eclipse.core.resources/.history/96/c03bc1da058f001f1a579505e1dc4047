@@ -28,6 +28,8 @@ public static void main(String[] args) {
 		}
 		
 		
+		
+		
 		System.out.println("-".repeat(20)+" SORTED ARRAY "+"-".repeat(20));
 		System.out.println(Arrays.toString(intArr));
 		
