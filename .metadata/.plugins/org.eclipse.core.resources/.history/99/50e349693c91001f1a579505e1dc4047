@@ -1,0 +1,59 @@
+package datastructures.doublylinkedlists;
+
+public class EmployeeNode {
+	
+	
+	private Employee employee;
+	private Employee next;
+	private Employee prev;
+	
+	
+	public EmployeeNode(Employee employee, Employee next, Employee prev) {
+		super();
+		this.employee = employee;
+		this.next = next;
+		this.prev = prev;
+	}
+
+
+	public Employee getEmployee() {
+		return employee;
+	}
+
+
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
+	}
+
+
+	public Employee getNext() {
+		return next;
+	}
+
+
+	public void setNext(Employee next) {
+		this.next = next;
+	}
+
+
+	public Employee getPrev() {
+		return prev;
+	}
+
+
+	public void setPrev(Employee prev) {
+		this.prev = prev;
+	}
+
+
+	@Override
+	public String toString() {
+		return "EmployeeNode [employee=" + employee + ", next=" + next + ", prev=" + prev + "]";
+	}
+	
+	
+	
+	
+	
+
+}

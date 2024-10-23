@@ -1,0 +1,22 @@
+package datastructures.doublylinkedlists;
+
+public class EmployeeDoublyLinkedlist {
+	
+	private EmployeeNode head;
+	private EmployeeNode tail;
+	private int size;
+	
+	
+	public void addToFront(Employee employee) {
+		
+	}
+	
+	
+	public EmployeeNode removeFromFront() {
+		
+		return null;
+	}
+	
+	
+
+}

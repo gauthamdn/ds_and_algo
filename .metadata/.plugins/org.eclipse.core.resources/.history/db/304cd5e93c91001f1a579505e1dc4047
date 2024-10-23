@@ -1,0 +1,36 @@
+package datastructures.doublylinkedlists;
+
+public class EmployeeDoublyLinkedlist {
+	
+	private EmployeeNode head;
+	private EmployeeNode tail;
+	private int size;
+	
+	
+	public void addToFront(Employee employee) {
+		
+	}
+	
+	
+	public EmployeeNode removeFromFront() {
+		
+		return null;
+	}
+	
+	
+	public int getSize() {
+		return this.size;
+	}
+	
+	public boolean isEmpty() {
+		return this.head==null;
+	}
+	
+	public void printList() {
+		
+	}
+	
+	piblic
+	
+
+}

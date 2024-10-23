@@ -1,0 +1,13 @@
+package datastructures.doublylinkedlists;
+
+public class EmployeeNode {
+	
+	
+	private Employee employee;
+	private Employee next;
+	private Employee prev;
+	
+	
+	
+
+}
