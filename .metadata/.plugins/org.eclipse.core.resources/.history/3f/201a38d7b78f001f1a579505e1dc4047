@@ -1,0 +1,28 @@
+package datastructures.linkedlists;
+
+public class EmployeeLinkedList {
+	
+	private EmployeeNode head;
+	
+	
+	public void addToFront(Employee emp1) {
+		EmployeeNode node = new EmployeeNode(emp1);
+		node.setNext(head);	
+		head = node;
+	}
+	
+	public void printList() {
+		
+		EmployeeNode current = head;
+		
+		System.out.print("HEAD -->");
+		
+		while(current!=null) {
+			System.out.print(current);
+			System.out.print("-->");
+			current = current.getNext();
+		}
+		
+	}
+
+}

@@ -1,0 +1,21 @@
+package datastructures.linkedlists;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import datastructures.arraylists.Employee;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		// add to list
+		Employee emp1 = new Employee("Mary", "Smith", 22);
+		Employee emp2 = new Employee("John","Tracker", 12);
+		Employee emp3 = new Employee("Mathew","Hayden",10);
+		Employee emp4 = new Employee("Raju","Pandey",8);
+		
+
+	}
+
+}

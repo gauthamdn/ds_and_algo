@@ -1,0 +1,14 @@
+package datastructures.linkedlists;
+
+public class EmployeeLinkedList {
+	
+	private EmployeeNode head;
+	
+	
+	public void addToFront(Employee emp1) {
+		EmployeeNode node = new EmployeeNode(emp1);
+		node.setNext(head);	
+		head = node;
+	}
+
+}

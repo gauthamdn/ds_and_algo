@@ -1,0 +1,5 @@
+package datastructures.linkedlists;
+
+public class EmployeeNode {
+
+}
