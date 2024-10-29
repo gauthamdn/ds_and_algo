@@ -16,8 +16,9 @@ public class EmployeeNode {
 	}
 
 
-	public EmployeeNode(Employee employee2) {
-		// TODO Auto-generated constructor stub
+	public EmployeeNode(Employee employee) {
+		super();
+		this.employee = employee;
 	}
 
 

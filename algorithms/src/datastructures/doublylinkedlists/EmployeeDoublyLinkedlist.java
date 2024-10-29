@@ -11,15 +11,14 @@ public class EmployeeDoublyLinkedlist {
 		EmployeeNode node = new EmployeeNode(employee);
 		
 		if(isEmpty()) {
-			tail = node;
+			this.head  = node;
 		}else {
-			head.setPrev(node);
+			this.head.setPrev(node);
 		}
 		
 		node.setNext(head);
-		head = node;
-		size++;
-		
+		this.head = node;
+		this.size++;
 		
 	}
 	

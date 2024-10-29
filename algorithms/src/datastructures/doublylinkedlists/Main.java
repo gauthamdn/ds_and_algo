@@ -1,13 +1,17 @@
 package datastructures.doublylinkedlists;
 
-
-import datastructures.doublylinkedlists.EmployeeDoublyLinkedlist;
-
 public class Main {
 
 	public static void main(String[] args) {
 		
 		
+		Employee emp1 = new Employee("Maddy","Smith",20);
+	
+		EmployeeDoublyLinkedlist empList = new EmployeeDoublyLinkedlist();
+		empList.addToFront(emp1);
+		
+		
+		/*
 		
 		Employee emp1 = new Employee("Mary", "Smith", 22);
 		Employee emp2 = new Employee("John","Tracker", 12);
@@ -22,6 +26,8 @@ public class Main {
 		empList.addToFront(emp3);
 		empList.addToFront(emp4);
 		empList.addToFront(emp5);
+		*/
+		
 		
 		
 		empList.printList();
