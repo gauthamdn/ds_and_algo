@@ -1,0 +1,18 @@
+package dynamicprogramming;
+
+public class Subsequence {
+
+	public static void main(String[] args) {
+		
+		System.out.println(printSubsequence("abc",0," "));
+		
+
+	}
+	
+	
+	public static String printSubsequence(String s, int i, String sfos) {
+		
+		return "";
+	}
+
+}

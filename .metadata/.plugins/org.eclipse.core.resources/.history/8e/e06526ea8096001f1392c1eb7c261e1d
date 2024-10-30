@@ -1,0 +1,35 @@
+package dynamicprogramming;
+
+public class Subsequence {
+
+	public static void main(String[] args) {
+		
+		System.out.println(isSubSequence("acte","astbc"));
+		
+
+	}
+	
+	
+	public static Boolean isSubSequence(String s, String t) {
+		
+		int matchCount = 0;
+		
+		for(int i = 0;i<s.length();i++)
+		{
+			for(int j=0;j<t.length();j++)
+			{
+				if(s.charAt(i) == t.charAt(j)) {
+					matchCount++;
+					break;
+				}
+					
+			}
+		}
+		
+		if(matchCount == s.length())
+			return true;
+		else 
+			return false;
+	}
+
+}
