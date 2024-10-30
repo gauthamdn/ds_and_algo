@@ -50,22 +50,6 @@ public class EmployeeDoublyLinkedlist {
 		
 	}
 	
-	
-	public void addToEnd(Employee emp) {
-		EmployeeNode node = new EmployeeNode(emp);
-		
-		if(tail == null)
-			head = node;
-		else {
-			tail.setNext(node);
-			node.setPrev(tail);
-		}
-		tail = node;
-		size++;
-		
-		
-	}
-	
 
 	
 
