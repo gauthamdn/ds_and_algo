@@ -86,13 +86,10 @@ public class SimpleHashTable {
 			hashedKey = (hashedKey + 1) % hashtable.length;
 		}
 		
-		if(hashtable[hashedKey]!=null && hashtable[hashedKey].key.equals(key)) {
-			return hashedKey;
-		}
-		else {
+		if(stopIndex == hashedKey)
 			return -1;
-		}
-			
+		else
+			return hashedKey;
 		
 		
 	}
@@ -105,32 +102,6 @@ public class SimpleHashTable {
 	private boolean occupied(int index) {
 		return hashtable[index]!=null;
 	}
-	
-	
-	public Employee remove(String key) {
-		int hashedKey = findKey(key);
-		if(hashedKey == -1)
-			return null;
-		
-		Employee employee = hashtable[hashedKey].employee;
-	
-		
-		hashtable[hashedKey] = null;
-		//rehashing
-		StoredEmployee[] oldHashtable = hashtable;
-		hashtable = new StoredEmployee[oldHashtable.length];
-		
-		for(int i =0;i< oldHashtable.length;i++) {
-			if(oldHashtable[i]!=null)
-				put(oldHashtable[i].key,oldHashtable[i].employee);
-		}
-		
-		return employee;
-		
-		
-	}
-	
-	
 	
 
 }

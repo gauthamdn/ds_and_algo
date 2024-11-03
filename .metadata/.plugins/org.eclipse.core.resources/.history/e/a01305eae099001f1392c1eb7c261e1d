@@ -115,7 +115,7 @@ public class SimpleHashTable {
 		Employee employee = hashtable[hashedKey].employee;
 	
 		
-		hashtable[hashedKey] = null;
+		//hashtable[hashedKey] = null;
 		//rehashing
 		StoredEmployee[] oldHashtable = hashtable;
 		hashtable = new StoredEmployee[oldHashtable.length];

@@ -26,14 +26,11 @@ public class Main {
 		System.out.println("Retrive key wilson "+ht.get("dravid"));
 		
 		ht.put(emp7.getLastName(), emp7);
-		//ht.printHashTable();
+		ht.printHashTable();
 		
 		System.out.println("Retrive key wilson "+ht.get("Boucher"));
 		
 		ht.remove("Boucher");
-		
-		System.out.println("Retrive key wilson "+ht.get("Boucher"));
-		ht.printHashTable();
 		
 		
 

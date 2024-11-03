@@ -32,7 +32,7 @@ public class Main {
 		
 		ht.remove("Boucher");
 		
-		System.out.println("Retrive key wilson "+ht.get("Boucher"));
+		//System.out.println("Retrive key wilson "+ht.get("Boucher"));
 		ht.printHashTable();
 		
 		
