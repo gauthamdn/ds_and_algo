@@ -1,0 +1,28 @@
+package algorithms;
+
+public class BucketSort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] intArray = {34,46,35,83,66,95,92,43};
+		
+		for(int i : intArray) {
+			System.out.print(i+" ");
+		}
+		
+		bucketSort(intArray);
+		
+		for(int i : intArray) {
+			System.out.print(i+" ");
+		}
+
+	}
+
+
+	private static void bucketSort(int[] intArray) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
