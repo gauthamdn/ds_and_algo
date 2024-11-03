@@ -1,0 +1,43 @@
+package stacks;
+
+public class ArrayStack {
+	
+	private Employee[] stack;
+	private int top;
+	
+	
+	public ArrayStack(int capacity) {
+		stack = new Employee[capacity];
+	}
+
+	
+	public void push(Employee employee) {
+		
+		if(top == stack.length) {
+			// this means array is full
+			// needs to resize the array
+			// create a new array with double the size
+			Employee[] newArray = new Employee[2*stack.length];
+			
+			// copy the old array into the newarray
+			
+			System.arraycopy(stack, 0, newArray, 0, stack.length);
+			stack = newArray;
+		
+		}
+		stack[top++] = employee;
+		
+		
+		
+	}
+	
+	public Employee pop() {
+		
+		return null;
+	}
+	
+	public Employee peek() {
+		
+		return null;
+	}
+}
