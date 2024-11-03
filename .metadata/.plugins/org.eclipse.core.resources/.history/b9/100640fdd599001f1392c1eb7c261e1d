@@ -53,16 +53,13 @@ public class SimpleHashTable {
 		if(hashedKey == -1)
 			return null;
 		
-		return hashtable[hashedKey].employee;
+		return hashtable[hashedKey];
 	}
 	
 	
 	public void printHashTable() {
 		for(int i = 0; i<hashtable.length;i++) {
-			if(hashtable[i]==null)
-				System.out.println("Empty");
-			else
-				System.out.println("Position "+i+": "+hashtable[i].employee);
+			System.out.println(hashtable[i]);
 		}
 	}
 	

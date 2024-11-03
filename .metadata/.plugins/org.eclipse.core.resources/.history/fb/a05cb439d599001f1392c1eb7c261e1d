@@ -5,7 +5,7 @@ public class SimpleHashTable {
 	private StoredEmployee[] hashtable;
 
 	public SimpleHashTable() {
-		this.hashtable = new StoredEmployee[10];
+		this.hashtable = new Employee[10];
 	}
 	
 	
@@ -44,54 +44,19 @@ public class SimpleHashTable {
 		if(occupied(hashedKey))
 			System.out.println("Sorry, there is already an employee at this position"+ hashedKey);
 		else
-			hashtable[hashedKey] = new StoredEmployee(key, employee);
+			hashtable[hashedKey] = employee;
 	}
 	
 	public Employee get(String key) {
-		int hashedKey = findKey(key);	
-		
-		if(hashedKey == -1)
-			return null;
-		
-		return hashtable[hashedKey].employee;
+		int hashedKey = hashKey(key);	
+		return hashtable[hashedKey];
 	}
 	
 	
 	public void printHashTable() {
 		for(int i = 0; i<hashtable.length;i++) {
-			if(hashtable[i]==null)
-				System.out.println("Empty");
-			else
-				System.out.println("Position "+i+": "+hashtable[i].employee);
+			System.out.println(hashtable[i]);
 		}
-	}
-	
-	private int findKey(String key) {
-		int hashedKey = hashKey(key);
-		
-		if(hashtable[hashedKey]!=null && hashtable[hashedKey].key.equals(key)) {
-			return hashedKey;
-		}
-		
-		int stopIndex = hashedKey;
-
-		if (hashedKey == hashtable.length - 1) {
-			hashedKey = 0;
-
-		} else
-			hashedKey++;
-
-		// keep probing until occupied and hashedkey is not stopindex
-		while ( hashedKey != stopIndex && hashtable[hashedKey]!=null &&  !hashtable[hashedKey].key.equals(key)) {
-			hashedKey = (hashedKey + 1) % hashtable.length;
-		}
-		
-		if(stopIndex == hashedKey)
-			return -1;
-		else
-			return hashedKey;
-		
-		
 	}
 	
 	

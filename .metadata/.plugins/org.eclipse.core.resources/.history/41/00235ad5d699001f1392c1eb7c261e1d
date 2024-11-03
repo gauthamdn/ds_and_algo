@@ -23,7 +23,7 @@ public class Main {
 		
 		ht.put(emp6.getLastName(), emp6);
 		
-		System.out.println("Retrive key wilson "+ht.get("dravid"));
+		System.out.println("Retrive key wilson "+ht.get("666666"));
 		
 		ht.put(emp7.getLastName(), emp7);
 		ht.printHashTable();

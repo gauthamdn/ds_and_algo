@@ -62,7 +62,7 @@ public class SimpleHashTable {
 			if(hashtable[i]==null)
 				System.out.println("Empty");
 			else
-				System.out.println("Position "+i+": "+hashtable[i].employee);
+				System.out.println("Position "+i+": "hashtable[i].employee);
 		}
 	}
 	

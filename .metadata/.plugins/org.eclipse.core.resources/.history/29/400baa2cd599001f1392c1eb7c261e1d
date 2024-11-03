@@ -1,0 +1,8 @@
+package hashtables;
+
+public class StoredEmployee {
+
+	public String key;
+	public Employee value;
+	
+}

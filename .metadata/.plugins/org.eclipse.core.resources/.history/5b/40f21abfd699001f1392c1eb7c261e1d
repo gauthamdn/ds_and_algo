@@ -19,7 +19,7 @@ public class Main {
 		ht.put(emp3.getLastName(), emp3);
 		ht.put(emp4.getLastName(), emp4);
 		ht.put(emp5.getLastName(), emp5);
-		//ht.printHashTable();
+		ht.printHashTable();
 		
 		ht.put(emp6.getLastName(), emp6);
 		
