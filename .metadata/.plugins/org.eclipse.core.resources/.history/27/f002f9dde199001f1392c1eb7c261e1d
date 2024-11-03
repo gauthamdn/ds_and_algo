@@ -1,0 +1,10 @@
+package hashtables;
+
+public class ChainedHashtable {
+
+	private int hashKey(String key) {
+		
+		return key.length() % hashtable.length;
+	}
+
+}

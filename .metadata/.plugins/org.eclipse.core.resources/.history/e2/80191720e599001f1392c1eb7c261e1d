@@ -1,0 +1,55 @@
+package hashtables;
+
+import java.util.LinkedList;
+import java.util.ListIterator;
+
+// each array element in the hashtable will contain a linkedlist.
+
+public class ChainedHashtable {
+
+	// create a object array
+	private LinkedList<StoredEmployee>[] hashtable;
+	
+	
+	public ChainedHashtable() {
+		hashtable = new LinkedList[10];
+		
+		for(int i = 0;i<hashtable.length;i++) {
+			hashtable[i] = new LinkedList<StoredEmployee>();
+		}
+		
+	}
+	
+	private int hashKey(String key) {
+		
+		return key.length() % hashtable.length;
+	}
+
+	public void put(String key, Employee employee) {
+		// TODO Auto-generated method stub
+		
+		int hashedKey = hashKey(key);
+		hashtable[hashedKey].add(new StoredEmployee(key,employee));
+		
+	}
+	
+	public Employee get(String key) {
+		int hashedKey = hashKey(key);
+		ListIterator<StoredEmployee> itr = hashtable[hashedKey].listIterator();
+		StoredEmployee employee = null;
+		while(itr.hasNext()) {
+			employee = itr.next();
+			if(employee.key.equals(key)) {
+				return employee;
+			}
+			
+		}
+		
+		return null;
+		
+	}
+	
+	
+	
+
+}
