@@ -1,0 +1,27 @@
+package stacks;
+
+public class Palindrome {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		
+		System.out.println(checkForPalindrome("abccba"));
+		
+		System.out.println(checkForPalindrome("Don't nod"));
+		
+		System.out.println(checkForPalindrome("I did, did I?"));
+
+	}
+
+	private static boolean checkForPalindrome(String string) {
+		// TODO Auto-generated method stub
+		
+		
+		
+		
+		return false;
+	}
+
+}
