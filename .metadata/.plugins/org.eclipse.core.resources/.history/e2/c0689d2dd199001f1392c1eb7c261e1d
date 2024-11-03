@@ -1,0 +1,25 @@
+package hashtables;
+
+public class SimpleHashTable {
+	
+	private Employee[] hashtable;
+
+	public SimpleHashTable() {
+		this.hashtable = new Employee[10];
+	}
+	
+	
+	private int hashKey(String key) {
+		
+		return key.length() % hashtable.length;
+	}
+	
+	
+	public void put(String key, Employee employee) {
+		int hashedKey = hashKey(key);
+		
+	}
+	
+	
+
+}

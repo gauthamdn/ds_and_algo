@@ -1,0 +1,13 @@
+package hashtables;
+
+public class SimpleHashTable {
+	
+	private Employee[] hashtable;
+
+	public SimpleHashTable() {
+		this.hashtable = new Employee[10];
+	}
+	
+	
+
+}
