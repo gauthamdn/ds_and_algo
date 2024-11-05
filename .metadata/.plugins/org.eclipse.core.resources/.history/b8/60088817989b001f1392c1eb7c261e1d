@@ -1,0 +1,23 @@
+package datastructures.graphs;
+
+import java.util.Arrays;
+
+public class BFSAdjacencyMatrix {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public static boolean validPath(int n, int[][] edges, int source, int destination) {
+	// create a adjacency matrix to represent the graph
+		
+	boolean[][] graph = new boolean[n][n];
+	for(boolean[] node: graph) {
+		Arrays.fill(nodes, false);
+	}
+	
+	return false;
+	}
+
+}

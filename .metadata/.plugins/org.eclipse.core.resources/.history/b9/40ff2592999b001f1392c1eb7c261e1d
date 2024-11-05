@@ -1,0 +1,52 @@
+package datastructures.graphs;
+
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class BFSAdjacencyMatrix {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public static boolean validPath(int n, int[][] edges, int source, int destination) {
+	// create a adjacency matrix to represent the graph
+		
+	boolean[][] graph = new boolean[n][n];
+	
+	// initialize the matrix with false
+	for(boolean[] node: graph) {
+		Arrays.fill(node, false);
+	}
+	
+	// for each edge given, fill the matrix positions to true
+	for(int[] edge: edges) {
+		int u = edge[0];
+		int v = edge[1];
+		graph[u][v] = true;
+		graph[v][u] = true;
+	}
+	
+	
+	
+	// create a queue for bfs 
+	Queue<Integer> queue = new LinkedList<>();
+	
+	//add the source node into queue
+	queue.add(source);
+	
+	//create a visited array 
+	boolean[] visited = new boolean[n];
+	// mark the entire visited array as false
+	Arrays.fill(visited, false);
+	
+	
+	
+	
+	
+	return false;
+	}
+
+}
