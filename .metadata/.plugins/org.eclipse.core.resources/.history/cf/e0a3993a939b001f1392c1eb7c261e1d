@@ -1,0 +1,28 @@
+package datastructures.graphs;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
+public class DFSAdjacenyMatrix {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	
+	    public boolean validPath(int n, int[][] edges, int source, int destination) {
+	        boolean[][] graph = new boolean[n][n];
+	        for(boolean[] row: graph){
+	            Arrays.fill(row,false);
+	        }
+	        
+	        
+	        
+	        
+			return false;
+
+	    }
+	
+
+}
