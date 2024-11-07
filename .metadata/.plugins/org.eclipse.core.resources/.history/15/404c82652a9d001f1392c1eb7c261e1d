@@ -1,0 +1,89 @@
+package leetcode.graphs;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/*
+ * https://leetcode.com/problems/numbers-with-same-consecutive-differences/description/
+ * 967. Numbers With Same Consecutive Differences
+ * Difficulty - Medium
+
+ * Given two integers n and k, return an array of all the integers of length n where the difference between every two consecutive digits is k. You may return the answer in any order.
+  Note that the integers should not have leading zeros. Integers as 02 and 043 are not allowed.
+
+Example 1:
+
+Input: n = 3, k = 7
+Output: [181,292,707,818,929]
+Explanation: Note that 070 is not a valid number, because it has leading zeroes.
+
+Example 2:
+
+Input: n = 2, k = 1
+Output: [10,12,21,23,32,34,43,45,54,56,65,67,76,78,87,89,98]
+
+Constraints:
+
+    2 <= n <= 9
+    0 <= k <= 9
+
+ *
+ */
+
+/*
+ * Decipher the problem: At a highlevel it doesnt look like a graph problem.
+ * However, if you look into the examples , you will see that [181, 292, 707, 818, 929]
+ * in each number 
+ * diff between 1 and 8 is 7 . Diff between 8 and 1 is 7
+ * diff between 2 and 9 is 7 and between 9 and 2 is 7
+ * diff between 7 and 0 is 7 and betweeen 0 and 7 is 7
+ * 
+ * this can easily charted as a graph 1->8 with a weight/edge of 7 
+ * and 2 -> 9 with a edge/weight of 7
+ * 
+ * Next check if this is a bidirectional graph or directional? 
+ *  1 -> 8 weight is 7 and 8-> 1 weight is 7
+ *  so its bidirectional
+ * 
+ * next check if this is a graph or a tree
+ * next check if this is cyclic 
+ * 
+ * Also notice that the first element of each number can be easily determined 
+ * eg: first elemetns can be 
+ * 1 _ _
+ * 2 _ _
+ * 3 _ _ ( cannot be 3 becaue 3+7 = 10 and we need the num length/size to be n=3 and not more than 3
+ * so all nums starting with 4 , 5, 6 cannot be in the output
+ * num with 7 can be there since 7 - 7 = 0; however 070 is not a valid num of length 3 and hence 0 cannot be the starting digit
+ * 
+ * This looks like a graph where 1 <-> 8 , 2 <-> 9 , 7<->0 are nodes and edges.
+ * we can use either DFS or BFS to traverse and find the list of output integers
+ * 
+ */
+
+public class NumWithSameConsecutiveDiff {
+
+	public static void main(String[] args) {
+		
+		
+	}
+	
+	public int[] numsSameConsecDiff(int n, int k) {
+		/// you can see that the return should be a list of numbers. so return type is int[]
+		
+		//we will use a list for this implementation, the the end we will convert to an array and return it.
+		List<Integer> result = new ArrayList<>();
+		
+		for(int res : result) {
+			
+		}
+		
+		int[] returnarray = new int[result.size()];
+		for(int i = 0;i<result.size;i++)
+			returnarray[i] = result.get(i);
+		
+		return returnarray;
+	}
+	
+
+}
