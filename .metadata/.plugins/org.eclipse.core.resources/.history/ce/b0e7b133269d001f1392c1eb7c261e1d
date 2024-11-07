@@ -1,0 +1,53 @@
+package datastructures.graphs;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class BFSAdjacencyList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public static boolean validPath(int n, int[][] edges, int source, int destination) {
+		// create a map to represent the graph
+		Map<Integer,List<Integer>> graph = new HashMap<>();
+		
+		
+		// fill the map with the edges ( key and neighbor list ) 
+		for(int[] edge: edges) {
+			
+			int u = edge[0];
+			int v = edge[1];
+			// for map with key u , fill v in the neighbor list
+			// for map with key v, fill u in the neighbor list
+			graph.computeIfAbsent(u, value-> new ArrayList<>()).add(v);
+			graph.computeIfAbsent(v, value-> new ArrayList<>()).add(u);
+			
+		}
+		
+		// create visited array to track the visited nodes/keys
+		
+		boolean[] visited = new boolean[n];
+		Arrays.fill(visited, false);
+		
+		return bfs(graph,source,destination,visited,n);
+	
+	}
+
+	private static boolean bfs(Map<Integer, List<Integer>> graph, int source, int destination, boolean[] visited,
+			int n) {
+		// TODO Auto-generated method stub
+		
+		
+		
+		
+		
+		return false;
+	}
+
+}
