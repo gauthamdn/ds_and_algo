@@ -65,7 +65,7 @@ public class BFSAdjacencyMatrix {
 		
 		// if current is same as destination then we have found the path. return true. else go through all neighors of current
 		if(current == destination) return true;
-		// go through the array and check which neighbors are there of current and if the are not visisted.
+		// go through the array and check which neighbors are there of current and if they are not visited.
 		// then add i to the queue and mark that node as visited
 		for(int i = 0;i<n;i++) {
 			if(graph[current][i] == true && !visited[i]) {

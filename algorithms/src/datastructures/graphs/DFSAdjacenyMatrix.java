@@ -28,7 +28,7 @@ public class DFSAdjacenyMatrix {
 		int destination = 5;
 		System.out.println(validPath(n,edges,source,destination));
 	*/
-		
+		// n is used to represent the size of the matrix array(or row in a matrix) which is 3
 		int n = 3;
 		int edges[][] = {{0,1},{1,2},{2,0}};
 		int source = 0;
@@ -74,7 +74,8 @@ public class DFSAdjacenyMatrix {
 			
 			
 			// base condition - if source and destination nodes are same, return true
-			if(source == destination) return true;
+			if(source == destination) 
+				return true;
 			// ensure to mark the source node as visited ( this will be used when a recursive call also occurs )
 			visited[source] = true;
 			
