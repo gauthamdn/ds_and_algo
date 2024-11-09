@@ -109,7 +109,7 @@ public class L1254_NumofClosedIslands {
 				
 				// similarly lets pick the last row
 			if(grid[n-1][j]==0)
-					dfs(n-1,j,n,m,grid);
+					dfs(n-1,0,n,m,grid);
 		}
 		
 		int result = 0;
@@ -120,7 +120,7 @@ public class L1254_NumofClosedIslands {
 					// increment result for each recursive call because it will happen to a unconnected land
 					result ++;
 					dfs(i,j,n,m,grid);
-					// we are not marking any visited because in dfs method, we mark the grid itself to 1
+					// we are not marking any visited because we will in dfs method mark the grid itself to 1
 				}
 				
 			}

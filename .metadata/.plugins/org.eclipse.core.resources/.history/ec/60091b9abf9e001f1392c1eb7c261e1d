@@ -109,7 +109,7 @@ public class L1254_NumofClosedIslands {
 				
 				// similarly lets pick the last row
 			if(grid[n-1][j]==0)
-					dfs(n-1,j,n,m,grid);
+					dfs(n-1,0,n,m,grid);
 		}
 		
 		int result = 0;
