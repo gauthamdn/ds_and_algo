@@ -5,15 +5,14 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class NumWithSameConsecDiff_bfs_3 {
+public class NumWithSameConsecDiff_bfs_L967_v3 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int n = 3  ,k =7;
 		
 		int[] result = numWithSameConsecDiff( n,  k);
-		for(int i = 0;i<result.length;i++)
-			System.out.println(result[i]);
+        for (int j : result) System.out.println(j);
 		
 
 	}
@@ -79,13 +78,5 @@ public class NumWithSameConsecDiff_bfs_3 {
 		return retres;
 	}
 
-	private static void dfs(int num, int n, int k, List<Integer> res) {
-		
-		
-		
-		
-		
-		
-	}
 
 }

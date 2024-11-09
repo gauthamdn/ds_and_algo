@@ -1,9 +1,9 @@
-package leetcode.graphs;
+package algorithms.src.leetcode.graphs;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class NumWithSameConsecDiff_2 {
+public class NumWithSameConsecDiff_L967_v2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -12,13 +12,8 @@ public class NumWithSameConsecDiff_2 {
 		int n = 4  ,k =3;
 		
 		int[] result = numWithSameConsecDiff( n,  k);
-		for(int i = 0;i<result.length;i++)
-			System.out.println(result[i]);
+        for (int j : result) System.out.println(j);
 		
-
-
-
-
 	}
 
 	private static int[] numWithSameConsecDiff(int n, int k) {

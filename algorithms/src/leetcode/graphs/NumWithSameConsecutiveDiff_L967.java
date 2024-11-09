@@ -1,4 +1,4 @@
-package leetcode.graphs;
+package algorithms.src.leetcode.graphs;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,13 +61,12 @@ Constraints:
  * 
  */
 
-public class NumWithSameConsecutiveDiff {
+public class NumWithSameConsecutiveDiff_L967 {
 
 	public static void main(String[] args) {
 		int n = 3 , k = 7;
 		int[] output = numsSameConsecDiff(n,k);
-		for(int i=0;i<output.length;i++)
-			System.out.println(output[i]);
+        for (int j : output) System.out.println(j);
 		
 	}
 	
