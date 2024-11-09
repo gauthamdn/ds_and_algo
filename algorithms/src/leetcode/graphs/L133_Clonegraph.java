@@ -62,7 +62,9 @@ public class L133_Clonegraph {
     	
     	
     	HashMap<Node,Node> map = new HashMap<>();
-    	
+    	// steplast: edge case - when the input is a null graph , then we need to handle null input
+    	//so we will add a null check 
+    	if(node == null) return null;
     	 // lets utilize a utilhelper method , because we can then recursively loop over that util method
     	return cloneUtil(node,map);
     	
@@ -91,8 +93,11 @@ public class L133_Clonegraph {
 			}
 			
 		}
-		
+		// return the new node that is created.
 		return newNode;
+		
+		
+		
 	}
 
 
