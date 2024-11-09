@@ -79,20 +79,15 @@ public class L133_Clonegraph {
 		
 		for(Node neighbor: node.neighbors) {
 			
-			// if the neighbor is not already cloned, the we need to clone it. We will recursively clone it and attach it to the newNode
 			if(!map.containsKey(neighbor)) {
-				//recursively calling the cloneUtil to create the neighbor node and adding it to the existing newNode
-				 newNode.neighbors.add(cloneUtil(neighbor,map));				
-			}else {
-				// if the neighbor already exists in the hashmap, meaning it was previously cloned and its already in the hashmap, 
-				// so then you just need to attach this neighbor to already existing node
-				newNode.neighbors.add(map.get(neighbor));
-				
+				Node newNode = new Node(neighbor.val);
+				map.put(node, newNode);
+				return cloneUtil(neighbor,map);
 			}
 			
 		}
 		
-		return newNode;
+		return node;
 	}
 
 

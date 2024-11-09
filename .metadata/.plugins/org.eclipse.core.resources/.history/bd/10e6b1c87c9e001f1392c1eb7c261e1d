@@ -63,36 +63,31 @@ public class L133_Clonegraph {
     	
     	HashMap<Node,Node> map = new HashMap<>();
     	
-    	 // lets utilize a utilhelper method , because we can then recursively loop over that util method
-    	return cloneUtil(node,map);
-    	
-    	           
+    	// create a newNode of type Node, and pass the node.val to the constructor
+        Node newNode = new Node(node.val);
+        // put the newNnode created into our hashmap
+        map.put(node, newNode);
+       
+        // lets utilize a utilhelper method , because we can then recursively loop over that util method
+        return cloneUtil(node,map);
+      
     
     }
 
 	private static Node cloneUtil(Node node, HashMap<Node, Node> map) {
-		
-		// create a newNode of type Node, and pass the node.val to the constructor
-		 Node newNode = new Node(node.val);
-		// put the newNnode created into our hashmap
-		 map.put(node, newNode);
+		// TODO Auto-generated method stub
 		
 		for(Node neighbor: node.neighbors) {
 			
-			// if the neighbor is not already cloned, the we need to clone it. We will recursively clone it and attach it to the newNode
-			if(!map.containsKey(neighbor)) {
-				//recursively calling the cloneUtil to create the neighbor node and adding it to the existing newNode
-				 newNode.neighbors.add(cloneUtil(neighbor,map));				
-			}else {
-				// if the neighbor already exists in the hashmap, meaning it was previously cloned and its already in the hashmap, 
-				// so then you just need to attach this neighbor to already existing node
-				newNode.neighbors.add(map.get(neighbor));
-				
+			if(!map.containsKey(node.val)) {
+				Node newNode = new Node(node.val);
+				map.put(node, newNode);
+				return cloneUtil(neighbor,map);
 			}
 			
 		}
 		
-		return newNode;
+		return node;
 	}
 
 
