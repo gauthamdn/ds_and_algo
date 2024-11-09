@@ -1,0 +1,48 @@
+package leetcode.graphs;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class NumWithSameConsecDiff_2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		int n = 3  ,k =7;
+		
+		int[] result = numWithSameConsecDiff(int n, int k);
+		for(int i = 0;i<result.length;i++)
+			System.out.println(result[i]);
+		
+
+	}
+
+	private static int[] numWithSameConsecDiff(int n, int k) {
+		
+		List<Integer> res = new ArrayList<>();
+		
+		// Step1: fill the first digit in the num. You know num can be 1 <num<9
+		// we will call the recursive function inside
+		for(int num=1;num<9,num++)
+			dfs(num,n-1,k,res);
+		
+		
+		
+		int[] retres = new int[res.size()];
+		for(int i =0;i<retres.length;i++) {
+			retres[i]= res.get(i);
+		}
+		return retres;
+	}
+
+	private static void dfs(int num, int i, int k, List<Integer> res) {
+		
+		
+		
+		
+		
+		
+	}
+
+}
