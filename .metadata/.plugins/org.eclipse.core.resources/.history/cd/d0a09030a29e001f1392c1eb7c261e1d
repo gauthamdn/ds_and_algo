@@ -94,32 +94,22 @@ public class L200_NumOfIslands {
 					// for BFS we need a queue. however, since we have to represent a matrix here we need a 2D queue.
 					// so we will declare a class called pair with just two values and use that to represent the matrix entry in the queue
 					Queue<Pair> q = new LinkedList<>();
-					
-					// add a pair to the queue
 					q.add(new Pair(i,j));
-					
-					// mark the pair visited
 					visited[i][j] = true;
 					
-					
-					// loop until queue is empty
 					while(!q.isEmpty()) {
 						
-						// remvoe the first entry from queue
 						Pair curr = q.remove();
-						// we will need two i and j so curri and currj
 						int curri = curr.first;
 						int currj = curr.second;
 						
-						// directions array as explained in the approach
 						int[][] directions = {{0,-1},{0,1},{1,0},{-1,0}};
-						
 						
 						for(int k = 0;k<4;k++) {
 							int newi = curri+ directions[k][0];
 							int newj = currj+ directions[k][1];
 							
-							// now we have to check if the node of newi,newj in the grid is connected and if it is not visited, then add it to the queue. And mark it visited.
+							// now we have to check if the node of newi,newj in the grid is connected and if it was not already visited then do dfs recurrsively
 							// one more check we need to do is , the newi and newj that is calculated should not go below 0 or beyond m and j. hence the simple issafe method check
 							if(isSafe(newi,newj,m,n) && grid[newi][newj] == '1' && !visited[newi][newj]) {
 								

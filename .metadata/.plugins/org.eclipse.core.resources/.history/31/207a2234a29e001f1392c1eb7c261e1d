@@ -119,7 +119,7 @@ public class L200_NumOfIslands {
 							int newi = curri+ directions[k][0];
 							int newj = currj+ directions[k][1];
 							
-							// now we have to check if the node of newi,newj in the grid is connected and if it is not visited, then add it to the queue. And mark it visited.
+							// now we have to check if the node of newi,newj in the grid is connected and if it is not visited, then add it to the queue
 							// one more check we need to do is , the newi and newj that is calculated should not go below 0 or beyond m and j. hence the simple issafe method check
 							if(isSafe(newi,newj,m,n) && grid[newi][newj] == '1' && !visited[newi][newj]) {
 								
