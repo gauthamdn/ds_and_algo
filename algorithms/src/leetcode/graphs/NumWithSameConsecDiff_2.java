@@ -16,6 +16,9 @@ public class NumWithSameConsecDiff_2 {
 			System.out.println(result[i]);
 		
 
+
+
+
 	}
 
 	private static int[] numWithSameConsecDiff(int n, int k) {
