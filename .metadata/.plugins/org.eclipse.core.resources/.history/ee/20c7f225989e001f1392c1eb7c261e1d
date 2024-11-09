@@ -1,0 +1,10 @@
+package leetcode.graphs;
+
+public class L200_NumOfIslands {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
