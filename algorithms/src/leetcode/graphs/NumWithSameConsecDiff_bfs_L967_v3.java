@@ -1,4 +1,4 @@
-package leetcode.graphs;
+package algorithms.src.leetcode.graphs;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -9,8 +9,6 @@ public class NumWithSameConsecDiff_bfs_3 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		
 		int n = 3  ,k =7;
 		
 		int[] result = numWithSameConsecDiff( n,  k);
@@ -43,7 +41,7 @@ public class NumWithSameConsecDiff_bfs_3 {
 			int size = q.size();
 			//step 8: put the below steps in a for loop of i =0 and queue size. This is needed to loop through each level in the graph as we do in bfs.
 			// step9: also in the below code, we have not kept a check on lenght of 3, so  we need to introduce a var len to keep a check of legnth n . this needs to be added to while condition above itself.
-			for(int i = 1; i<size;i++) {
+			for(int i = 0; i<size;i++) {
 			
 				// step4 q.remove to get the first num
 				int currnum = q.remove(); // remove the first num from queue
@@ -52,14 +50,14 @@ public class NumWithSameConsecDiff_bfs_3 {
 				int lastdigit = currnum %10;
 				
 				// step6 : conditions remain same - check if last digit + k <=0 and lastdigit -k >=0 and add those nums to the queue. handle edge case of k==0
-				if(lastdigit + k <=9) {
+				if(lastdigit + k <=9)
 					q.add(currnum*10+lastdigit+k);
 				// step7: add k!= 0 to handle the edge case of k == 0, so we dont get duplicate nums in output	
-				if(k!=0 && lastdigit -k >=0) {
+				if(k!=0 && lastdigit -k >=0)
 					q.add(currnum*10+lastdigit-k);
-				}
+
 			
-			}
+
 			
 			
 				
