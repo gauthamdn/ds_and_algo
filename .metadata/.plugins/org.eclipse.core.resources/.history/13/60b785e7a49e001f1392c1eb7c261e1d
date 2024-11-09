@@ -53,7 +53,7 @@ Constraints:
 // if interviewr confirms its surrounded by water, then it means its water before the first column on the matrix , its water before the first row of the matrix, 
 // its water after the last column of matrix and its water below the last row of the matrix. 
 // so now the first set of cols and rows can be considered part of the island.
-// This is important - because there is a variation of question - leetcode 1254 -Num of closed islands. In this its not given that 4 sides are covered by water. so you cannot include the edge rows/colums to see surrounded by water
+// This is important - because there is a variation of question - leetcode 1254 -Num of closed islands 
 
 public class L200_NumOfIslands {
 

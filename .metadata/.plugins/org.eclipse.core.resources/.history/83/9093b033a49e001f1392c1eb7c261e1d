@@ -49,12 +49,6 @@ Constraints:
 // basically if you take any node - you can add the following [( -1,0) , (+1,0) , (0,-1), (0,+1)] to traverse the 4 directions.
 // basically you have to do dfs 4 times in the 4 directions and keep marking visited and increment the island result counter.
 
-// also one more question to check with the interviewer is - if all 4 sides is it water. This indicates that the matrix itself as a whole a island. 
-// if interviewr confirms its surrounded by water, then it means its water before the first column on the matrix , its water before the first row of the matrix, 
-// its water after the last column of matrix and its water below the last row of the matrix. 
-// so now the first set of cols and rows can be considered part of the island.
-// This is important - because there is a variation of question - leetcode 1254 -Num of closed islands. In this its not given that 4 sides are covered by water. so you cannot include the edge rows/colums to see surrounded by water
-
 public class L200_NumOfIslands {
 
 	public static void main(String[] args) {
