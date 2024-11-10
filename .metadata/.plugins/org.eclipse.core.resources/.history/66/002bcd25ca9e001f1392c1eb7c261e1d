@@ -1,6 +1,8 @@
 package leetcode.graphs;
 
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /*
  * 
@@ -47,7 +49,7 @@ Constraints:
  * 
  */
 
-public class L733_floodfill {
+public class L733_floodfill_bfs {
 	
 	// Approach . 
 	// step 1 : Start for the source pixel/node and apply the targetcolor to start pixel 
@@ -104,8 +106,6 @@ public class L733_floodfill {
 		
 		
 		
-		
-		
 	}
 	
 	public static int[][] floodFill(int[][] image, int sr, int sc, int targetcolor) {
@@ -116,6 +116,10 @@ public class L733_floodfill {
 		int n = image[0].length;
 		// get the source color
 		int sourceColor = image[sr][sc];
+		
+		Queue<Pair> q = new LinkedList<>();
+		
+		
 		
 		int[][] result = dfs(image,n,m,sr,sc,sourceColor,targetcolor);
 		
@@ -152,6 +156,16 @@ public class L733_floodfill {
 		return(newi>=0 && newi<m && newj >=0 && newj<n);
 	}
 
+}
+
+class pair{
+	int first;
+	int second;
+	
+	Pair(int first, int second){
+		this.first = first;
+		this.second = second;
+	}
 }
 
 

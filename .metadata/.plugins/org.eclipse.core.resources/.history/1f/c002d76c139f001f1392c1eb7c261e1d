@@ -1,6 +1,8 @@
 package leetcode.graphs;
 
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /*
  * 
@@ -47,7 +49,7 @@ Constraints:
  * 
  */
 
-public class L733_floodfill {
+public class L733_floodfill_bfs {
 	
 	// Approach . 
 	// step 1 : Start for the source pixel/node and apply the targetcolor to start pixel 
@@ -104,8 +106,6 @@ public class L733_floodfill {
 		
 		
 		
-		
-		
 	}
 	
 	public static int[][] floodFill(int[][] image, int sr, int sc, int targetcolor) {
@@ -117,41 +117,61 @@ public class L733_floodfill {
 		// get the source color
 		int sourceColor = image[sr][sc];
 		
-		int[][] result = dfs(image,n,m,sr,sc,sourceColor,targetcolor);
-		
-		//int[][] result ;
-		
-		return result;
-    }
-
-	private static int[][] dfs(int[][] image, int n, int m, int sr, int sc, int sourceColor, int targetcolor) {
-		
-		if(image[sr][sc] == sourceColor )
-			image[sr][sc] = targetcolor;
-		else
+		if(image[sr][sc] == targetcolor)
 			return image;
 		
-		int[][] dir = {{-1,0},{1,0},{0,-1},{0,1}};
+		Queue<pair_class> q = new LinkedList<>();
+		image[sr][sc] = targetcolor;
+		q.add(new pair_class(sr,sc));
 		
-		for(int k = 0;k<4;k++) {
+		while(!q.isEmpty()) {
 			
-			int newi = sr + dir[k][0];
-			int newj = sc + dir[k][1];
+			pair_class pair = q.remove();
+			int r = pair.first;
+			int c = pair.second;
 			
-			if(isSafe(newi, newj, n,m) && image[newi][newj] == sourceColor) {
-				dfs(image,n,m,newi,newj,sourceColor, targetcolor);
+			if(image[r][c] == sourceColor )
+				image[r][c] = targetcolor;
+			else
+				return image;
+			
+			int[][] dir = {{-1,0},{1,0},{0,-1},{0,1}};
+			
+			for(int k = 0;k<4;k++) {
+				
+				int newi = r + dir[k][0];
+				int newj = c + dir[k][1];
+				
+				if(isSafe(newi, newj, n,m) && image[newi][newj] == sourceColor) {
+					image[newi][newj] = targetcolor;
+					q.add(new pair_class(newi,newj));
+				}
+				
 			}
+			
 			
 		}
 		
 		
- 		return image;
-	}
+		return image;
+    }
+
 
 	private static boolean isSafe(int newi, int newj, int n, int m) {
 		return(newi>=0 && newi<m && newj >=0 && newj<n);
 	}
 
+}
+
+// had to name pair_class due to collision from another file 
+class pair_class{
+	int first;
+	int second;
+	
+	pair_class(int first, int second){
+		this.first = first;
+		this.second = second;
+	}
 }
 
 

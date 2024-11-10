@@ -47,7 +47,7 @@ Constraints:
  * 
  */
 
-public class L733_floodfill {
+public class L733_floodfill_bfs {
 	
 	// Approach . 
 	// step 1 : Start for the source pixel/node and apply the targetcolor to start pixel 
@@ -62,13 +62,7 @@ public class L733_floodfill {
 		int sc = 1;
 		int targetcolor = 2;
 		
-		int[][] result ;
-		
-		if(image[sr][sc] == targetcolor)
-			result = image;
-		else {
-			result = floodFill(image,sr,sc,targetcolor);
-		}
+		int[][] result = floodFill(image,sr,sc,targetcolor);
 		
 		// print result
 		System.out.println("[");
@@ -86,14 +80,7 @@ public class L733_floodfill {
 		int sr2 = 0;
 		int sc2 = 0;
 		int targetcolor2 = 0;
-		int[][]	result2 ;
-		//handling edge case - input 2, where sourcecolor = targetcolor = 0
-		if(image[sr][sc] == targetcolor)
-			result2 = image2;
-		else {
-			result2 = floodFill(image2,sr2,sc2,targetcolor2);
-		}
-	
+		int[][] result2 = floodFill(image2,sr2,sc2,targetcolor2);
 		
 		// print result2
 		System.out.println("[");
@@ -101,8 +88,6 @@ public class L733_floodfill {
 			System.out.println(Arrays.toString(res));
 		}
 		System.out.print("]");
-		
-		
 		
 		
 		
@@ -117,6 +102,9 @@ public class L733_floodfill {
 		// get the source color
 		int sourceColor = image[sr][sc];
 		
+		//handling edge case - input 2, where sourcecolor = targetcolor = 0
+		if(image[sr][sc] == targetcolor)
+			return image;
 		int[][] result = dfs(image,n,m,sr,sc,sourceColor,targetcolor);
 		
 		//int[][] result ;
