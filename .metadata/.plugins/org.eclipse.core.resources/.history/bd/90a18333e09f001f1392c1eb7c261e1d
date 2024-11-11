@@ -1,0 +1,15 @@
+package timedPractice;
+
+
+// 70. Climbing Stairs
+// https://leetcode.com/problems/climbing-stairs/ 
+
+
+public class ClimbingStairs {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
