@@ -42,7 +42,7 @@ public class ClimbingStairs {
 	}
 	
 	
-	// STEP3: To improve the timecomplexity , use Memoization.
+	// STEP3: To improve the speed , use Memoization.
 	// implement a cache and store the value in the cache. And use it to check if value exists for every recursive call
 
 }

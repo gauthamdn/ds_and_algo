@@ -1,0 +1,73 @@
+package timedPractice;
+
+import java.util.Iterator;
+import java.util.List;
+
+public class SnakeMatrix {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		int n = 2;
+		List<String> commands = {"RIGHT","DOWN"};
+		
+		System.out.println(finalPositionOfSnake(n,commands));
+	}
+	
+	 public static int finalPositionOfSnake(int n, List<String> commands) {
+	        
+	        int[][] graph = new int[n][n];
+
+	        for(int i =0;i<n;i++){
+	            for(int j=0;j<n;i++)
+	                graph[i][j] = (i*n) + j;
+	        }  
+
+	         /*
+	         index moves
+	         Right = {{0,1}};
+	         left = {0,-1}
+	         down = {1,0}
+	         up = {-1,0 }
+
+	        
+	        0 1 3
+	        3 4 5
+	        6 7 8
+	        */
+
+
+	         int curr_row = 0;
+	         int curr_col = 0; 
+	         
+	         Iterator<String> itr = commands.listIterator();
+	         
+	         while(itr.hasNext()) {
+	        	            
+	            switch(itr.next()){
+	               case "UP" -> {  curr_row+= -1;
+	                            curr_col+=0;
+	               }
+	               case "DOWN" -> {  curr_row+= 1;
+	                            curr_col+=0;
+	               }
+	               case "RIGHT" ->{  curr_row+= 0;
+	                            curr_col+=1;
+	               }
+	               case "LEFT" ->{  curr_row+= 0;
+	                            curr_col+=-1;
+	               }
+	               default -> {
+	                System.out.println("Invalid Command");
+	                }
+	 
+	        };
+
+	    }
+	          return graph[curr_row][curr_col];
+	    
+	 }
+
+}
+

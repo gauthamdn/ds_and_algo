@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item key="hasShownOverlayPopupBefore" value="true"/>
-	<item key="replaceBarOpen" value="false"/>
+	<item key="replaceBarOpen" value="true"/>
 	<list key="searchhistory">
+		<item value="&quot;O&quot;"/>
+		<item value="&quot;X&quot;"/>
+		<item value="pair"/>
+		<item value="["/>
+		<item value="]"/>
+		<item value="&quot;"/>
 		<item value="add("/>
 		<item value="add"/>
+	</list>
+	<list key="replacehistory">
+		<item value="&apos;O&apos;"/>
+		<item value="&apos;X&apos;"/>
+		<item value="{"/>
+		<item value="}"/>
+		<item value="&apos;"/>
 	</list>
 </section>

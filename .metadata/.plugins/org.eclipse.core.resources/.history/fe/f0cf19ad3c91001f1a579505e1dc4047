@@ -1,9 +1,0 @@
-package datastructures.doublylinkedlists;
-
-public class EmployeeDoublyLinkedlist {
-	
-	private EmployeeNode head;
-	private EmployeeNode tail;
-	private int size;
-
-}
