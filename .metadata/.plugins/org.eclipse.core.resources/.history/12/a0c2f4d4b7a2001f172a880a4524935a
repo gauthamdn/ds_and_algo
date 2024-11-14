@@ -36,13 +36,13 @@ public class StrobogrammaticNum {
 
 	public static void main(String[] args) {
 		int num = 609;
-		
-		//System.out.println(reverse(num));
 		System.out.println(getStrobogrammaticNum(num));
 		if(num == getStrobogrammaticNum(num))
 			System.out.println("num = "+num + " is Strobogrammatic");
 		else
 			System.out.println("num = "+num + " is NOT Strobogrammatic");
+		
+		
 
 	}
 
@@ -51,13 +51,14 @@ public class StrobogrammaticNum {
 		
 		while(num!=0) {
 			int digit = num%10;
+			int value  = -1;
 			switch(digit) {
-				case 0 -> {output = output *10 + 0;}
-				case 1 -> {output = output *10 + 1;}
-				case 6 -> {output = output *10 + 9;}
-				case 8 -> {output = output *10 + 8;}
-				case 9 -> {output = output *10 + 6;}
-				default -> { output = -1;}
+				case 0 -> {output = digit *10 + 0;}
+				case 1 -> {output = digit *10 + 1;}
+				case 6 -> {output = digit *10 + 9;}
+				case 8 -> {output = digit *10 + 8;}
+				case 9 -> {output = digit *10 + 6;}
+				default -> { value = -1;}
 			};
 			
 			num/=10;
@@ -65,17 +66,5 @@ public class StrobogrammaticNum {
 		}
 		return output;
 	}
-	
-	/*private static int reverse(int num) {
-		int output = 0;
-		
-		while(num!=0) {
-			int digit = num%10;
-			output = output *10+ digit;
-			num/=10;
-			
-		}
-		return output;
-	}*/
 
 }
