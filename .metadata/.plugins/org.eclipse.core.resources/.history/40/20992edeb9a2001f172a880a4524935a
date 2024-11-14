@@ -46,27 +46,19 @@ public class StrobogrammaticNum {
 			System.out.println("Inputnum = "+Inputnum + " is NOT Strobogrammatic");
 		
 		
-		
 		//Problem 2: Print all the Strobogrammatic numbers of size n
-		// input n = num of digits in a num
-		int n = 4;
+		
+		int n = 1;
 		// set looping. default for n=0 or n=1 the range is low = 1 and high = 9. 
 		//
 		int low = 1;
 		int high = 10;
-		// logic to identify the range of numbers to check for strobogrammatic or not 
-		// if n = 3 ie 3 digit nums, range is low = 100 to high = 999
-		// if n = 2 ie 2 digit nums, range is low = 10 to high = 99
 		for(int i = 1; i<n;i++)
 		{
 			low *= 10;
 			high = (high*10) - 1;
 		}
 		
-		// only in case n = 1 , then low =0  since 0 is also a single digit num
-		if(n == 1) low = 0;
-		
-		// loop through all numbers in range and print if input num = its strobogrammticNum
 		for(int i = low ;i<=high;i++) {
 			if(i == getStrobogrammaticNum(i))
 				System.out.print(i+" ");

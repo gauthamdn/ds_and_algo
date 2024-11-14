@@ -49,7 +49,7 @@ public class StrobogrammaticNum {
 		
 		//Problem 2: Print all the Strobogrammatic numbers of size n
 		// input n = num of digits in a num
-		int n = 4;
+		int n = 5;
 		// set looping. default for n=0 or n=1 the range is low = 1 and high = 9. 
 		//
 		int low = 1;

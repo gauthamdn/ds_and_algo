@@ -48,8 +48,8 @@ public class StrobogrammaticNum {
 		
 		
 		//Problem 2: Print all the Strobogrammatic numbers of size n
-		// input n = num of digits in a num
-		int n = 4;
+		
+		int n = 1;
 		// set looping. default for n=0 or n=1 the range is low = 1 and high = 9. 
 		//
 		int low = 1;
@@ -66,7 +66,7 @@ public class StrobogrammaticNum {
 		// only in case n = 1 , then low =0  since 0 is also a single digit num
 		if(n == 1) low = 0;
 		
-		// loop through all numbers in range and print if input num = its strobogrammticNum
+		// loop through all numbers in range and print if input num = strobogrammticNum
 		for(int i = low ;i<=high;i++) {
 			if(i == getStrobogrammaticNum(i))
 				System.out.print(i+" ");
