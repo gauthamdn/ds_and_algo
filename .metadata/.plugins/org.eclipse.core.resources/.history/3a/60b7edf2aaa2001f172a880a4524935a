@@ -4,11 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-/*
- * https://leetcode.com/problems/snake-in-matrix/description/
- * 3248. Snake in Matrix
-
- * There is a snake in an n x n matrix grid and can move in four possible directions. Each cell in the grid is identified by the position: grid[i][j] = (i * n) + j.
+/*There is a snake in an n x n matrix grid and can move in four possible directions. Each cell in the grid is identified by the position: grid[i][j] = (i * n) + j.
 
 The snake starts at cell 0 and follows a sequence of commands.
 
