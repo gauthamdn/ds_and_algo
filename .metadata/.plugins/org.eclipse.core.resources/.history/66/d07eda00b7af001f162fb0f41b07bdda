@@ -2,7 +2,6 @@ package patterns.twopointers;
 
 
 // time complexity - O(n), however algo will run only for n/2 times
-// space complexity is O(1) since we use constant space to store two indexes
 
 public class isPalindrome {
 

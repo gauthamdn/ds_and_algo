@@ -1,0 +1,50 @@
+package patterns.twopointers;
+
+import java.util.Arrays;
+
+public class ThreeSum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] nums = {1,-1,0};
+		int target = -1;
+		
+		System.out.println(findSumOfThree(nums,target));
+		
+		int[] nums1 = {3,7,1,2,8,4,5};
+		int target1 = 10;
+		
+		System.out.println(findSumOfThree(nums1,target1));
+		
+		int[] nums2 = {3,7,1,2,8,4,5};
+		int target2 = 31;
+		
+		System.out.println(findSumOfThree(nums2,target2));
+
+	}
+
+	
+	public static boolean findSumOfThree(int[] nums, int target) {
+	      
+	      Arrays.sort(nums);
+	      int left = 1;
+	      int right = nums.length -1;
+	      for(int i = 0;i<nums.length;i++){
+	        left = i+1;
+	        while(left<right){
+	          if(nums[i]+nums[left]+nums[right] == target){
+	            return true;
+	          }
+	          else if(nums[i]+nums[left]+nums[right] >target){
+	            right--;
+	          }
+	          else if(nums[i]+nums[left]+nums[right] <target){
+	            left++;
+	          }
+	        }
+	      }
+	      
+	      return false;
+	   }
+}
