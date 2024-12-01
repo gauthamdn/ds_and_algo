@@ -1,6 +1,6 @@
 package patterns.twopointers;
 
-public class ReverseWordsinSentence {
+public class ReverseWordsinSentence2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -8,38 +8,32 @@ public class ReverseWordsinSentence {
 
 	}
 
-	/*
-	public static String reverseWords(String sentence) {
-
-        // Replace this placeholder return statement with your code
-        int start = 0;
-        int end = sentence.length() -1;
-        
-        StringBuilder str = new StringBuilder();
-        str.append(sentence);
-        
-        String revStr  = str.reverse().toString();
-        
-        System.out.println(revStr);
-        
-        return "";
-    }
 	
-	*/
 	
 public static String reverseWords(String sentence) {
 
-        
+	sentence = sentence.trim();
         String s  = reverseStr(sentence);
-        
 
-        
         //word reversal
         int start = 0;
         int end = 0;
+        
         String sortedSendtence = "";
         
+        char[] c = s.toCharArray();
+        int strLen = c.length-1;
         
+        for(start = 0, end =0;end<=strLen; ++end) {
+        	if(end ==strLen || c[end]==' ') {
+        		int endIdx = (end == strLen ) ? end : end - 1;
+        		reverseStr(c,start,endIdx);
+        		start = end+1;
+        		
+        	}
+        }
+        
+        /*
         while(end<s.length()) {
         	
         	String word = "";
@@ -63,12 +57,26 @@ public static String reverseWords(String sentence) {
         	end = end+1;	
         	}
         	
-        }
+        }*/
         
-        return sortedSendtence.trim();
+        return new String(c).trim();
     }
     
-    public static String reverseStr(String str) {
+    private static void reverseStr(char[] c, int start, int end) {
+	
+    	while(start<end) {
+    		char temp = c[start];
+    		c[start] = c[end];
+    		c[end] = temp;
+    		start++;
+    		end--;
+     	}
+	
+    }
+
+
+
+	public static String reverseStr(String str) {
     
        StringBuilder s = new StringBuilder();
        s.append(str);

@@ -27,7 +27,7 @@ public class ReverseWordsinSentence {
 	
 	*/
 	
-public static String reverseWords(String sentence) {
+	public static String reverseWords(String sentence) {
 
         
         String s  = reverseStr(sentence);
@@ -55,7 +55,7 @@ public static String reverseWords(String sentence) {
         	}
         	
         	if(word!="")
-        		sortedSendtence = sortedSendtence + reverseStr(word)+" ";
+        		sortedSendtence = sortedSendtence + reverseStr(word) + " ";
         	
         	while(end < s.length() && s.charAt(end)==' ' )
         	{
@@ -65,7 +65,8 @@ public static String reverseWords(String sentence) {
         	
         }
         
-        return sortedSendtence.trim();
+        
+        return sortedSendtence;
     }
     
     public static String reverseStr(String str) {
