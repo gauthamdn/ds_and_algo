@@ -1,0 +1,26 @@
+package patterns.twopointers;
+
+public class ReverseWordsinSentence {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		reverseWords("Hello World");
+
+	}
+
+	public static String reverseWords(String sentence) {
+
+        // Replace this placeholder return statement with your code
+        int start = 0;
+        int end = sentence.length() -1;
+        
+        StringBuilder str = new StringBuilder();
+        str.append(sentence);
+        
+        String revStr  = str.reverse().toString();
+        
+        System.out.println(revStr);
+        
+        return "";
+    }
+}

@@ -14,8 +14,6 @@ public class SortColors {
 		// else if current color = 2 , swap current and end and increment current and decrement end pointer
 		
 		// iterate until current <=end
-		// time complexity - O(n)
-		// space complexity - O(1)
 		
 		int[] colors = {1,1,0,2};
 		int[] SortedColors = sortColors(colors);
