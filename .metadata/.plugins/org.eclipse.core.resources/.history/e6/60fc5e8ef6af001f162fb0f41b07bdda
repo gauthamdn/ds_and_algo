@@ -1,7 +1,5 @@
 package patterns.twopointers;
 
-import static java.lang.Character.*;
-
 public class ReverseWordsinSentence2 {
 
 	public static void main(String[] args) {
@@ -34,12 +32,6 @@ public static String reverseWords(String sentence) {
         		
         	}
         }
-        
-        char c1 = 'e';
-        //c1.isDigit(c1);
-        
-        isLetter(c1);
-        isDigit(c1);
         
         /*
         while(end<s.length()) {
