@@ -1,0 +1,43 @@
+package patterns.twopointers;
+
+public class MinMovesforPalindrome {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String input = "cxcx";
+		System.out.println(minMovesToMakePalindrome(input));
+	}
+	
+	
+	public static int minMovesToMakePalindrome(String s) {
+        int moves = 0;
+        
+        int j = s.length() -1;
+        char[] c = s.toCharArray();
+       
+         for(int i =0;i<=j;i++){
+           int k = j;
+
+           for(;i<k;k--){
+             if(c[i] == c[k]){
+               while(k<=j){
+                 //swap(c[k],c[k+1]);
+                 int temp = c[k];
+                 c[k] = c[k+1];
+                 c[k+1] = temp;
+                  k++;
+                  moves++;
+               }
+               j--;
+               break;
+             }
+             
+           }      
+           
+         }
+
+       return moves;
+    }
+
+}
