@@ -4,7 +4,7 @@ public class ReverseWordsinSentence {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(reverseWords("Hello  World  "));
+		System.out.println(reverseWords("Hello  World taken one "));
 
 	}
 
