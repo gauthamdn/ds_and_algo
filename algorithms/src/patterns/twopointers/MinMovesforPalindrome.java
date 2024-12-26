@@ -43,7 +43,7 @@ public class MinMovesforPalindrome {
            }
            
            if(i==k) {
-        	   
+        
         	   int mid = c.length/2;
         	   while(k<mid) {
         		   moves++;
