@@ -1,0 +1,10 @@
+package patterns.practice.Feb2025.fastandslow;
+
+public class circularArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
