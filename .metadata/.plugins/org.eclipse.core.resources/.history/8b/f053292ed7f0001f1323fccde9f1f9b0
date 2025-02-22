@@ -7,9 +7,9 @@ public class PascalTriangle {
 
 	public static void main(String[] args) {
 		
-		int numrows = 0;
+		int numrows = 
 		
-		//ArrayList<List<Integer>> pascalT = new ArrayList<>();
+		ArrayList<List<Integer>> pascalT = new ArrayList<>();
 		
 		
 		
