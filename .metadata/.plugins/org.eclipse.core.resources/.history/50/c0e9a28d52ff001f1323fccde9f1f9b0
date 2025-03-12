@@ -1,0 +1,144 @@
+package leetcode;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class RottonOranges {
+	
+	
+
+	public static void main(String[] args) {
+		
+
+		// TODO Auto-generated method stub
+		
+		int[][] grid = {{2,1,1},{1,1,0},{0,1,1}};
+		
+		int result = orangesRotting(grid);
+		
+		System.out.println(result);
+
+	}
+	
+	
+
+	    public static int orangesRotting(int[][] grid) {
+
+	        //int[] rotten = new int[9];
+			
+	    	// num of rows
+	        int m = grid.length;
+	        // num of columns:
+	        int n = grid[0].length;
+	        
+	        int time = 0;
+	        
+	        
+	        //Step1: find all the rotton oranges in the grid
+	        //Iteration 1:  Loop through all the rotton oranges and find their adjacent and increment the timer
+	        
+	        //Iteration 2: Oranges marked rotton in the previous loop, find their adjacent and increment the timer
+	        // Run iteration 2 until all the connected oranges are rotten or you reach the end of the grid.
+	        
+	        
+	        Queue<Pair> q = new LinkedList();
+	        
+	        
+	        // Step1: This loop should store all the rotton orange grid into the queue
+	        for(int i = 0;i<m;i++) {
+	        	for(int j = 0;j<n;j++) {
+	        		if(grid[i][j] == 2) {
+	        			// store this in queue
+	        			q.add(new Pair(i,j));
+	        			
+	        			
+	        		}
+	        			
+	        	}
+	        }
+	        
+	        int len = q.size();
+	        int itr = 0;
+	        
+	        while(!q.isEmpty()) {
+	     	       
+	        	time = time + findAdjMarkRotton(q.size(),grid,q,m,n);
+	        	
+	        }
+	        	
+	        
+	        // find if there are any Non-rotton oranges left , if yes return -1 
+	        for(int i = 0;i<m;i++) {
+	        	for(int j = 0;j<n;j++) {
+	        		if(grid[i][j] == 1) {
+	        			// store this in queue
+	        			return -1;
+	        			
+	        			
+	        		}
+	        			
+	        	}
+	        }
+	        
+	        return time;
+	        
+	        
+	    }
+	    
+	    
+	    private static int findAdjMarkRotton(int size, int[][] grid, Queue<Pair> q,int m, int n) {
+			// TODO Auto-generated method stub
+	    	
+	        int itr = 0;
+	    
+	    	
+	    	 while(!q.isEmpty() && itr<size ) {
+		        	
+		        	Pair curr = q.remove();
+		        	int r = curr.row;
+		        	int c = curr.col;
+		        	
+		        	int[][] direction = {{-1,0},{1,0},{0,1},{0,-1}};
+		        	
+		        	for(int i = 0;i<direction.length;i++) {
+		        		int newr = r+direction[i][0];
+		        		int newc = r+direction[i][1];
+		        		
+		        		if(isSafe(newr,newc,m,n) && grid[newr][newc] == 1) {
+		        			grid[newr][newc] = 2;
+		        			q.add(new Pair(newr,newc));
+		        		}
+		        		
+
+		        	}
+		        	itr++;
+		        	
+		        }
+		        
+		        return 1;
+			
+		}
+
+
+
+		private static boolean isSafe(int newr, int newc,int m,int n) {
+			// TODO Auto-generated method stub
+	    	
+	    	if(newr <m && newc<n)
+	    		return true;
+	    	
+			return false;
+		}
+
+
+
+}
+
+class Pair{
+	int row;
+	int col;
+	Pair(int row, int col){
+		this.row = row;
+		this.col = col;
+	}
+}
